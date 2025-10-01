@@ -1,5 +1,6 @@
 import type { Card as DeckCard, Color as DeckColor } from './deck';
 import type { Randomizer, Shuffler } from '../utils/random_utils';
+import type { RoundMemento } from './round';
 import { standardRandomizer, standardShuffler } from '../utils/random_utils';
 
 export type Color = DeckColor;
@@ -61,7 +62,7 @@ export type GameMemento = {
   targetScore: number;
   scores: number[];
   cardsPerPlayer: number;
-  currentRound?: import('./round').RoundMemento;
+  currentRound?: RoundMemento;
 };
 
 export interface Game {
